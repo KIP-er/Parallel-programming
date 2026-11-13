@@ -38,14 +38,8 @@ cmake -S . -B build
 cmake --build build --config Release
 python -m pip install -r requirements.txt
 python gen.py 800
-mpiexec -n 4 ./build/matrix_mpi
-python verify.py
-```
-
-В Windows exe обычно находится в `build/Release/matrix_mpi.exe`:
-
-```powershell
 mpiexec -n 4 .\build\Release\matrix_mpi.exe
+python verify.py
 ```
 
 ## Эксперименты
